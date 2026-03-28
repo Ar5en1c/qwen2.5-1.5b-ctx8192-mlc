@@ -1,0 +1,326 @@
+{
+  "version": "2.0.0",
+  "tool": "webllm-bench",
+  "type": "benchmark",
+  "generatedAt": "2026-03-28T21:42:49.969Z",
+  "device": {
+    "gpu": "Unknown GPU",
+    "vendor": "Unknown",
+    "architecture": "",
+    "estVramMB": 8192,
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+    "platform": "MacIntel",
+    "timestamp": "2026-03-28T21:39:25.557Z"
+  },
+  "config": {
+    "promptTokens": 1024,
+    "maxTokens": 128,
+    "iterations": 10
+  },
+  "results": [
+    {
+      "modelId": "Qwen2.5-1.5B-Instruct-q4f16_1-MLC-ctx8192-local-qwen2.5-1.5b-ctx8192-local-v1774587761859",
+      "config": {
+        "promptTokens": 1024,
+        "maxTokens": 128,
+        "iterations": 10
+      },
+      "modelMeta": {
+        "shortName": "Qwen2.5-1.5B-Instruct-MLC-ct…",
+        "family": "Qwen",
+        "size": "1.5B",
+        "quant": "q4f16_1",
+        "vramMB": 2000,
+        "contextWindow": 8192,
+        "lowResource": false,
+        "isCustom": true
+      },
+      "modelRecord": {
+        "modelRoot": "http://localhost:8765/local-model-host/qwen2.5-1.5b-ctx8192-local-v1774587761859",
+        "modelLib": "http://localhost:8765/jobtracker-mlc-lab-worktree/.mlc-build/artifacts/Qwen2.5-1.5B-Instruct-q4f16_1-ctx8192_cs1024-webgpu-src-tvm.wasm?v=1774587783193"
+      },
+      "avgMs": 8724.61,
+      "p95Ms": 8744.4,
+      "avgTps": 14.557,
+      "avgOutTokens": 127,
+      "avgMsPerTok": 68.7,
+      "avgPrefillTps": 354.433,
+      "avgEngineDecodeTps": 19.769,
+      "avgTtft": 2.2825,
+      "tokenSource": "usage",
+      "runtimeMemory": {
+        "before": {
+          "timestamp": "2026-03-28T21:39:47.121Z",
+          "jsHeapUsedMB": 304.28,
+          "jsHeapTotalMB": 306.41,
+          "jsHeapLimitMB": 4096,
+          "deviceMemoryGB": 8,
+          "note": "GPU VRAM usage is not directly exposed by WebGPU in browser runtimes."
+        },
+        "after": {
+          "timestamp": "2026-03-28T21:41:18.198Z",
+          "jsHeapUsedMB": 276.77,
+          "jsHeapTotalMB": 291.23,
+          "jsHeapLimitMB": 4096,
+          "deviceMemoryGB": 8,
+          "note": "GPU VRAM usage is not directly exposed by WebGPU in browser runtimes."
+        },
+        "jsHeapDeltaMB": -27.51
+      },
+      "runs": [
+        {
+          "totalMs": 8744.4,
+          "outTokens": 127,
+          "tps": 14.524,
+          "prefillTps": 354.033,
+          "decodeTps": 19.726,
+          "ttft": 2.2851,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        },
+        {
+          "totalMs": 8720.1,
+          "outTokens": 127,
+          "tps": 14.564,
+          "prefillTps": 354.902,
+          "decodeTps": 19.779,
+          "ttft": 2.2795,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        },
+        {
+          "totalMs": 8714.7,
+          "outTokens": 127,
+          "tps": 14.573,
+          "prefillTps": 355.37,
+          "decodeTps": 19.782,
+          "ttft": 2.2765,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        },
+        {
+          "totalMs": 8714.8,
+          "outTokens": 127,
+          "tps": 14.573,
+          "prefillTps": 354.669,
+          "decodeTps": 19.794,
+          "ttft": 2.281,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        },
+        {
+          "totalMs": 8717.8,
+          "outTokens": 127,
+          "tps": 14.568,
+          "prefillTps": 354.887,
+          "decodeTps": 19.776,
+          "ttft": 2.2796,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        },
+        {
+          "totalMs": 8742.8,
+          "outTokens": 127,
+          "tps": 14.526,
+          "prefillTps": 351.266,
+          "decodeTps": 19.776,
+          "ttft": 2.3031,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        },
+        {
+          "totalMs": 8720.2,
+          "outTokens": 127,
+          "tps": 14.564,
+          "prefillTps": 354.778,
+          "decodeTps": 19.775,
+          "ttft": 2.2803,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        },
+        {
+          "totalMs": 8717.4,
+          "outTokens": 127,
+          "tps": 14.569,
+          "prefillTps": 354.871,
+          "decodeTps": 19.782,
+          "ttft": 2.2797,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        },
+        {
+          "totalMs": 8722.4,
+          "outTokens": 127,
+          "tps": 14.56,
+          "prefillTps": 355.323,
+          "decodeTps": 19.755,
+          "ttft": 2.2768,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        },
+        {
+          "totalMs": 8731.5,
+          "outTokens": 127,
+          "tps": 14.545,
+          "prefillTps": 354.234,
+          "decodeTps": 19.749,
+          "ttft": 2.2838,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        }
+      ]
+    },
+    {
+      "modelId": "Qwen2.5-1.5B-Instruct-q4f16_1-MLC",
+      "config": {
+        "promptTokens": 1024,
+        "maxTokens": 128,
+        "iterations": 10
+      },
+      "modelMeta": {
+        "shortName": "Qwen2.5-1.5B-Instruct",
+        "family": "Qwen",
+        "size": "1.5B",
+        "quant": "q4f16_1",
+        "vramMB": 1629.75,
+        "contextWindow": 4096,
+        "lowResource": true,
+        "isCustom": false
+      },
+      "modelRecord": {
+        "modelRoot": "https://huggingface.co/mlc-ai/Qwen2.5-1.5B-Instruct-q4f16_1-MLC",
+        "modelLib": "https://raw.githubusercontent.com/mlc-ai/binary-mlc-llm-libs/main/web-llm-models/v0_2_80/Qwen2-1.5B-Instruct-q4f16_1-ctx4k_cs1k-webgpu.wasm"
+      },
+      "avgMs": 8842.23,
+      "p95Ms": 8863.7,
+      "avgTps": 14.363,
+      "avgOutTokens": 127,
+      "avgMsPerTok": 69.62,
+      "avgPrefillTps": 352.046,
+      "avgEngineDecodeTps": 19.461,
+      "avgTtft": 2.298,
+      "tokenSource": "usage",
+      "runtimeMemory": {
+        "before": {
+          "timestamp": "2026-03-28T21:41:18.233Z",
+          "jsHeapUsedMB": 276.77,
+          "jsHeapTotalMB": 291.23,
+          "jsHeapLimitMB": 4096,
+          "deviceMemoryGB": 8,
+          "note": "GPU VRAM usage is not directly exposed by WebGPU in browser runtimes."
+        },
+        "after": {
+          "timestamp": "2026-03-28T21:42:49.969Z",
+          "jsHeapUsedMB": 276.2,
+          "jsHeapTotalMB": 319.31,
+          "jsHeapLimitMB": 4096,
+          "deviceMemoryGB": 8,
+          "note": "GPU VRAM usage is not directly exposed by WebGPU in browser runtimes."
+        },
+        "jsHeapDeltaMB": -0.57
+      },
+      "runs": [
+        {
+          "totalMs": 8863.7,
+          "outTokens": 127,
+          "tps": 14.328,
+          "prefillTps": 352.275,
+          "decodeTps": 19.391,
+          "ttft": 2.2965,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        },
+        {
+          "totalMs": 8840.3,
+          "outTokens": 127,
+          "tps": 14.366,
+          "prefillTps": 352.383,
+          "decodeTps": 19.462,
+          "ttft": 2.2958,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        },
+        {
+          "totalMs": 8854.5,
+          "outTokens": 127,
+          "tps": 14.343,
+          "prefillTps": 353.121,
+          "decodeTps": 19.401,
+          "ttft": 2.291,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        },
+        {
+          "totalMs": 8837.2,
+          "outTokens": 127,
+          "tps": 14.371,
+          "prefillTps": 351.8,
+          "decodeTps": 19.481,
+          "ttft": 2.2996,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        },
+        {
+          "totalMs": 8835.7,
+          "outTokens": 127,
+          "tps": 14.374,
+          "prefillTps": 352.383,
+          "decodeTps": 19.474,
+          "ttft": 2.2958,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        },
+        {
+          "totalMs": 8843.7,
+          "outTokens": 127,
+          "tps": 14.361,
+          "prefillTps": 350.414,
+          "decodeTps": 19.49,
+          "ttft": 2.3087,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        },
+        {
+          "totalMs": 8826.4,
+          "outTokens": 127,
+          "tps": 14.389,
+          "prefillTps": 353.213,
+          "decodeTps": 19.482,
+          "ttft": 2.2904,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        },
+        {
+          "totalMs": 8819.9,
+          "outTokens": 127,
+          "tps": 14.399,
+          "prefillTps": 354.996,
+          "decodeTps": 19.47,
+          "ttft": 2.2789,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        },
+        {
+          "totalMs": 8853.8,
+          "outTokens": 127,
+          "tps": 14.344,
+          "prefillTps": 348.137,
+          "decodeTps": 19.504,
+          "ttft": 2.3238,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        },
+        {
+          "totalMs": 8847.1,
+          "outTokens": 127,
+          "tps": 14.355,
+          "prefillTps": 351.739,
+          "decodeTps": 19.454,
+          "ttft": 2.3,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        }
+      ]
+    }
+  ]
+}

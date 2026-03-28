@@ -1,0 +1,326 @@
+{
+  "version": "2.0.0",
+  "tool": "webllm-bench",
+  "type": "benchmark",
+  "generatedAt": "2026-03-28T20:50:29.548Z",
+  "device": {
+    "gpu": "Unknown GPU",
+    "vendor": "Unknown",
+    "architecture": "",
+    "estVramMB": 8192,
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+    "platform": "MacIntel",
+    "timestamp": "2026-03-28T20:47:20.300Z"
+  },
+  "config": {
+    "promptTokens": 1024,
+    "maxTokens": 128,
+    "iterations": 10
+  },
+  "results": [
+    {
+      "modelId": "Qwen2.5-1.5B-Instruct-q4f16_1-MLC-ctx8192-local-qwen2.5-1.5b-ctx8192-local-v1774587761859",
+      "config": {
+        "promptTokens": 1024,
+        "maxTokens": 128,
+        "iterations": 10
+      },
+      "modelMeta": {
+        "shortName": "Qwen2.5-1.5B-Instruct-MLC-ct…",
+        "family": "Qwen",
+        "size": "1.5B",
+        "quant": "q4f16_1",
+        "vramMB": 2000,
+        "contextWindow": 8192,
+        "lowResource": false,
+        "isCustom": true
+      },
+      "modelRecord": {
+        "modelRoot": "http://localhost:8765/local-model-host/qwen2.5-1.5b-ctx8192-local-v1774587761859",
+        "modelLib": "http://localhost:8765/jobtracker-mlc-lab-worktree/.mlc-build/artifacts/Qwen2.5-1.5B-Instruct-q4f16_1-ctx8192_cs1024-webgpu-src-tvm.wasm?v=1774587783193"
+      },
+      "avgMs": 8719.88,
+      "p95Ms": 8746.4,
+      "avgTps": 14.564,
+      "avgOutTokens": 127,
+      "avgMsPerTok": 68.66,
+      "avgPrefillTps": 353.229,
+      "avgEngineDecodeTps": 19.807,
+      "avgTtft": 2.2903,
+      "tokenSource": "usage",
+      "runtimeMemory": {
+        "before": {
+          "timestamp": "2026-03-28T20:47:38.873Z",
+          "jsHeapUsedMB": 39.05,
+          "jsHeapTotalMB": 41.96,
+          "jsHeapLimitMB": 4096,
+          "deviceMemoryGB": 8,
+          "note": "GPU VRAM usage is not directly exposed by WebGPU in browser runtimes."
+        },
+        "after": {
+          "timestamp": "2026-03-28T20:49:10.174Z",
+          "jsHeapUsedMB": 245.71,
+          "jsHeapTotalMB": 256.96,
+          "jsHeapLimitMB": 4096,
+          "deviceMemoryGB": 8,
+          "note": "GPU VRAM usage is not directly exposed by WebGPU in browser runtimes."
+        },
+        "jsHeapDeltaMB": 206.66
+      },
+      "runs": [
+        {
+          "totalMs": 8740.2,
+          "outTokens": 127,
+          "tps": 14.531,
+          "prefillTps": 350.794,
+          "decodeTps": 19.803,
+          "ttft": 2.3062,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        },
+        {
+          "totalMs": 8736.9,
+          "outTokens": 127,
+          "tps": 14.536,
+          "prefillTps": 352.644,
+          "decodeTps": 19.769,
+          "ttft": 2.2941,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        },
+        {
+          "totalMs": 8697.8,
+          "outTokens": 127,
+          "tps": 14.601,
+          "prefillTps": 354.265,
+          "decodeTps": 19.858,
+          "ttft": 2.2836,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        },
+        {
+          "totalMs": 8700.2,
+          "outTokens": 127,
+          "tps": 14.597,
+          "prefillTps": 354.126,
+          "decodeTps": 19.849,
+          "ttft": 2.2845,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        },
+        {
+          "totalMs": 8710.1,
+          "outTokens": 127,
+          "tps": 14.581,
+          "prefillTps": 354.126,
+          "decodeTps": 19.813,
+          "ttft": 2.2845,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        },
+        {
+          "totalMs": 8707,
+          "outTokens": 127,
+          "tps": 14.586,
+          "prefillTps": 353.491,
+          "decodeTps": 19.839,
+          "ttft": 2.2886,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        },
+        {
+          "totalMs": 8706.8,
+          "outTokens": 127,
+          "tps": 14.586,
+          "prefillTps": 354.685,
+          "decodeTps": 19.816,
+          "ttft": 2.2809,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        },
+        {
+          "totalMs": 8708.2,
+          "outTokens": 127,
+          "tps": 14.584,
+          "prefillTps": 353.816,
+          "decodeTps": 19.833,
+          "ttft": 2.2865,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        },
+        {
+          "totalMs": 8745.2,
+          "outTokens": 127,
+          "tps": 14.522,
+          "prefillTps": 350.809,
+          "decodeTps": 19.777,
+          "ttft": 2.3061,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        },
+        {
+          "totalMs": 8746.4,
+          "outTokens": 127,
+          "tps": 14.52,
+          "prefillTps": 353.538,
+          "decodeTps": 19.717,
+          "ttft": 2.2883,
+          "tokenSource": "usage",
+          "text": "The sentence \"The quick brown fox jumps over the lazy dog\" appears multiple time"
+        }
+      ]
+    },
+    {
+      "modelId": "Qwen3-1.7B-q4f16_1-MLC",
+      "config": {
+        "promptTokens": 1024,
+        "maxTokens": 128,
+        "iterations": 10
+      },
+      "modelMeta": {
+        "shortName": "Qwen3-1.7B",
+        "family": "Qwen",
+        "size": "1.7B",
+        "quant": "q4f16_1",
+        "vramMB": 2036.66,
+        "contextWindow": 4096,
+        "lowResource": true,
+        "isCustom": false
+      },
+      "modelRecord": {
+        "modelRoot": "https://huggingface.co/mlc-ai/Qwen3-1.7B-q4f16_1-MLC",
+        "modelLib": "https://raw.githubusercontent.com/mlc-ai/binary-mlc-llm-libs/main/web-llm-models/v0_2_80/Qwen3-1.7B-q4f16_1-ctx4k_cs1k-webgpu.wasm"
+      },
+      "avgMs": 7438.1,
+      "p95Ms": 7483.8,
+      "avgTps": 17.075,
+      "avgOutTokens": 127,
+      "avgMsPerTok": 58.57,
+      "avgPrefillTps": 304.431,
+      "avgEngineDecodeTps": 26.652,
+      "avgTtft": 2.6574,
+      "tokenSource": "usage",
+      "runtimeMemory": {
+        "before": {
+          "timestamp": "2026-03-28T20:49:10.208Z",
+          "jsHeapUsedMB": 245.71,
+          "jsHeapTotalMB": 256.96,
+          "jsHeapLimitMB": 4096,
+          "deviceMemoryGB": 8,
+          "note": "GPU VRAM usage is not directly exposed by WebGPU in browser runtimes."
+        },
+        "after": {
+          "timestamp": "2026-03-28T20:50:29.548Z",
+          "jsHeapUsedMB": 338.38,
+          "jsHeapTotalMB": 366.97,
+          "jsHeapLimitMB": 4096,
+          "deviceMemoryGB": 8,
+          "note": "GPU VRAM usage is not directly exposed by WebGPU in browser runtimes."
+        },
+        "jsHeapDeltaMB": 92.67
+      },
+      "runs": [
+        {
+          "totalMs": 7420.9,
+          "outTokens": 127,
+          "tps": 17.114,
+          "prefillTps": 304.685,
+          "decodeTps": 26.742,
+          "ttft": 2.6552,
+          "tokenSource": "usage",
+          "text": "<think>\n</think>\n\nThe sentence is a repetition of the same phrase.<|im_end|>\n\n</"
+        },
+        {
+          "totalMs": 7483.8,
+          "outTokens": 127,
+          "tps": 16.97,
+          "prefillTps": 304.021,
+          "decodeTps": 26.42,
+          "ttft": 2.661,
+          "tokenSource": "usage",
+          "text": "<think>\n</think>\n\nThe sentence is a repetition of the same phrase.<|im_end|>\n\n</"
+        },
+        {
+          "totalMs": 7430.8,
+          "outTokens": 127,
+          "tps": 17.091,
+          "prefillTps": 304.41,
+          "decodeTps": 26.698,
+          "ttft": 2.6576,
+          "tokenSource": "usage",
+          "text": "<think>\n</think>\n\nThe sentence is a repetition of the same phrase.<|im_end|>\n\n</"
+        },
+        {
+          "totalMs": 7429,
+          "outTokens": 127,
+          "tps": 17.095,
+          "prefillTps": 304.421,
+          "decodeTps": 26.709,
+          "ttft": 2.6575,
+          "tokenSource": "usage",
+          "text": "<think>\n</think>\n\nThe sentence is a repetition of the same phrase.<|im_end|>\n\n</"
+        },
+        {
+          "totalMs": 7455.3,
+          "outTokens": 127,
+          "tps": 17.035,
+          "prefillTps": 304.376,
+          "decodeTps": 26.555,
+          "ttft": 2.6579,
+          "tokenSource": "usage",
+          "text": "<think>\n</think>\n\nThe sentence is a repetition of the same phrase.<|im_end|>\n\n</"
+        },
+        {
+          "totalMs": 7445.6,
+          "outTokens": 127,
+          "tps": 17.057,
+          "prefillTps": 304.662,
+          "decodeTps": 26.593,
+          "ttft": 2.6554,
+          "tokenSource": "usage",
+          "text": "<think>\n</think>\n\nThe sentence is a repetition of the same phrase.<|im_end|>\n\n</"
+        },
+        {
+          "totalMs": 7413,
+          "outTokens": 127,
+          "tps": 17.132,
+          "prefillTps": 304.811,
+          "decodeTps": 26.773,
+          "ttft": 2.6541,
+          "tokenSource": "usage",
+          "text": "<think>\n</think>\n\nThe sentence is a repetition of the same phrase.<|im_end|>\n\n</"
+        },
+        {
+          "totalMs": 7411.9,
+          "outTokens": 127,
+          "tps": 17.135,
+          "prefillTps": 304.536,
+          "decodeTps": 26.785,
+          "ttft": 2.6565,
+          "tokenSource": "usage",
+          "text": "<think>\n</think>\n\nThe sentence is a repetition of the same phrase.<|im_end|>\n\n</"
+        },
+        {
+          "totalMs": 7470.1,
+          "outTokens": 127,
+          "tps": 17.001,
+          "prefillTps": 304.238,
+          "decodeTps": 26.484,
+          "ttft": 2.6591,
+          "tokenSource": "usage",
+          "text": "<think>\n</think>\n\nThe sentence is a repetition of the same phrase.<|im_end|>\n\n</"
+        },
+        {
+          "totalMs": 7420.6,
+          "outTokens": 127,
+          "tps": 17.115,
+          "prefillTps": 304.147,
+          "decodeTps": 26.759,
+          "ttft": 2.6599,
+          "tokenSource": "usage",
+          "text": "<think>\n</think>\n\nThe sentence is a repetition of the same phrase.<|im_end|>\n\n</"
+        }
+      ]
+    }
+  ]
+}
