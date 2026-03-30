@@ -25,6 +25,8 @@
     "launch:preflight": "node ./scripts/launch_preflight.mjs",
     "launch:all": "npm run launch:preflight",
     "oss:pack": "node ./scripts/prepare_oss_packages.mjs",
+    "hf:upload:ctx8192": "python3 ./scripts/upload_ctx8192_model_to_hf.py",
+    "hf:upload:ctx8192:dry": "python3 ./scripts/upload_ctx8192_model_to_hf.py --dry-run",
     "test": "node --test ./tests/*.test.mjs",
     "serve:webllm": "python3 -m http.server 8765 --directory ./webllm-lab",
     "serve:root": "python3 -m http.server 8765 --directory .",

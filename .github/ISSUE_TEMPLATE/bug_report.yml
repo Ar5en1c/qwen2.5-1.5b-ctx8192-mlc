@@ -1,0 +1,82 @@
+name: Bug report
+description: Report an app/runtime issue with reproducible details.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Include exact runtime details so we can reproduce.
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      placeholder: One-line description of the problem
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Bench
+        - Chat
+        - Compare
+        - Find Best
+        - Community
+        - Custom model import
+        - Build/docs/scripts
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser + version
+      placeholder: e.g., Chrome 146.0.7680.165
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: OS + hardware
+      placeholder: e.g., macOS 15 / M1 Air
+    validations:
+      required: true
+  - type: textarea
+    id: benchmark_profile
+    attributes:
+      label: Benchmark/config profile
+      description: Include promptTokens, maxTokens, iterations, cache mode, model IDs.
+      placeholder: promptTokens=1024, maxTokens=128, iterations=10, cache=IndexedDB ...
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open ...
+        2. Select ...
+        3. Click ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence (required for perf/runtime issues)
+      description: Attach exported JSON and screenshot/log snippets.
+      placeholder: webllm-bench-YYYY-MM-DDTHHMMSS.json + screenshot/log
+    validations:
+      required: true

@@ -9,6 +9,7 @@
   - Best-model sweep
   - Community baseline import/export
 - Custom model support for MLC/WebLLM artifacts
+- One-click hosted preset for Qwen2.5-1.5B ctx8192
 - Reproducible 8k context validation protocol and report generators
 
 ## 8k validation result (Qwen2.5-1.5B, measured)
@@ -59,6 +60,10 @@ Per-export report:
 ```bash
 npm run report:8k:validation -- --in /absolute/path/to/webllm-bench-<timestamp>.json
 ```
+
+Hosted preset artifacts:
+- `https://huggingface.co/Ar5en1c/Qwen2.5-1.5B-Instruct-q4f16_1-MLC-ctx8192`
+- `https://huggingface.co/Ar5en1c/Qwen2.5-1.5B-Instruct-q4f16_1-MLC-ctx8192/resolve/main/Qwen2.5-1.5B-Instruct-q4f16_1-ctx8192_cs1024-webgpu.wasm`
 
 ## Notes
 

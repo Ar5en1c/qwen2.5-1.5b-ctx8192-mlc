@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: WebLLM Bench Live Demo
+    url: https://ar5en1c.github.io/webllm-bench/
+    about: Run a quick sanity check before opening a bug.
+  - name: Device + Model Guide
+    url: https://github.com/Ar5en1c/webllm-bench/blob/main/docs/DEVICE_MODEL_GUIDE_2026-03-30.md
+    about: Recommended browser/model profiles and validation workflow.
