@@ -1,23 +1,18 @@
-# WebLLM Bench v1.0.0
+# Qwen2.5-1.5B ctx8192 MLC Workflow v1.0.0
 
 ## What this release includes
 
-- Browser-native local LLM toolkit:
-  - Benchmark
-  - Chat
-  - Side-by-side compare
-  - Best-model sweep
-  - Community baseline import/export
-- Custom model support for MLC/WebLLM artifacts
-- One-click hosted preset for Qwen2.5-1.5B ctx8192
-- Reproducible 8k context validation protocol and report generators
+- Reproducible compile/runbook workflow for `Qwen2.5-1.5B` at `ctx8192`
+- Validation protocol and report generators
+- Hosted Hugging Face one-click integration guide for WebLLM Bench
+- Launch validation artifacts and claim-safe summary
 
-## 8k validation result (Qwen2.5-1.5B, measured)
+## Validation summary (measured)
 
-Source:
+Primary aggregate source:
 - `reports/launch_8k_batch_validation_2026-03-28.md`
 
-Profile used for all included parity runs:
+Fixed profile used for aggregate parity:
 - `promptTokens=1024`
 - `maxTokens=128`
 - `iterations=10`
@@ -34,25 +29,31 @@ Range:
 - Decode delta: `-0.53% .. +1.58%`
 - Latency delta: `-1.33% .. +0.48%`
 
-Browser families represented in exports:
-- `Chrome-family, Safari`
+Latest long-output stress profile (`1024/512/5`, force-full):
+- Throughput delta: `-1.96%`
+- Latency delta: `+1.94%`
+- Decode delta: `-1.98%`
+- TTFT delta: `+0.63%`
 
-Functional context gate:
-- 8k model handles a >4k retrieval prompt.
-- 4k baseline overflows at `5813` prompt tokens (`context window size: 4096`).
+Functional gate:
+- 8k build handles >4k retrieval prompts
+- 4k baseline overflows at `5813` prompt tokens (`ctx=4096`)
 
-## Claim-safe summary
+## Hosted artifacts
 
-- [TESTED] Custom ctx8192 model is stable and remains in parity band vs the official 4k baseline on the fixed benchmark profile above.
-- [TESTED] The ctx8192 model passes functional >4k prompt handling where 4k fails by context limit.
-- [LIMITATION] Browser WebGPU does not expose exact live GPU VRAM usage counters; VRAM values are model metadata and JS heap proxies.
+- Model repo:
+  - `https://huggingface.co/Ar5en1c/Qwen2.5-1.5B-Instruct-q4f16_1-MLC-ctx8192`
+- WebGPU wasm:
+  - `https://huggingface.co/Ar5en1c/Qwen2.5-1.5B-Instruct-q4f16_1-MLC-ctx8192/resolve/main/Qwen2.5-1.5B-Instruct-q4f16_1-ctx8192_cs1024-webgpu.wasm`
 
-## Repro steps
+## Limitation statement
+
+- Browser WebGPU does not expose exact live GPU VRAM telemetry; VRAM values are model metadata/proxy signals.
+
+## Repro
 
 ```bash
-npm run test
 npm run report:8k:batch
-npm run launch:draft
 ```
 
 Per-export report:
@@ -60,12 +61,3 @@ Per-export report:
 ```bash
 npm run report:8k:validation -- --in /absolute/path/to/webllm-bench-<timestamp>.json
 ```
-
-Hosted preset artifacts:
-- `https://huggingface.co/Ar5en1c/Qwen2.5-1.5B-Instruct-q4f16_1-MLC-ctx8192`
-- `https://huggingface.co/Ar5en1c/Qwen2.5-1.5B-Instruct-q4f16_1-MLC-ctx8192/resolve/main/Qwen2.5-1.5B-Instruct-q4f16_1-ctx8192_cs1024-webgpu.wasm`
-
-## Notes
-
-- Excluded from 8k-vs-4k aggregate:
-  - `reports/webllm-bench-2026-03-28T205156281Z.json` (not an 8k-vs-4k pair).
