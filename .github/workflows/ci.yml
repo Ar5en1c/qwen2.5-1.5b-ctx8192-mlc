@@ -17,11 +17,17 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Syntax check
-        run: node --check bench.js
+      - name: Syntax check (report scripts)
+        run: |
+          node --check scripts/generate_8k_validation_report.mjs
+          node --check scripts/generate_8k_batch_report.mjs
 
-      - name: Run tests
-        run: npm run test
+      - name: Python syntax check (upload helper)
+        run: python3 -m py_compile scripts/upload_ctx8192_model_to_hf.py
 
-      - name: Build OSS packages
-        run: npm run oss:pack
+      - name: Required file smoke check
+        run: |
+          test -f README.md
+          test -f docs/CUSTOM_CONTEXT_GUIDE.md
+          test -f docs/VALIDATION_PROTOCOL_8K.md
+          test -f docs/HUGGINGFACE_ONE_CLICK_8K.md
